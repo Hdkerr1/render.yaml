@@ -1,0 +1,31 @@
+# Exported from Render on 2025-11-18T08:31:56Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: Whispered Desire
+      runtime: python
+      repo: https://github.com/Hdkerr1/.github
+      plan: free
+      envVars:
+      - key: USERBOT_SESSION
+        sync: false
+      - key: TELETHON_API_HASH
+        sync: false
+      - key: TELETHON_API_ID
+        sync: false
+      - key: ADMIN_IDs
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: whispereddesire
+        sync: false
+      region: oregon
+      buildCommand: pip install -r requirements.txt
+      startCommand: main.py
+      autoDeployTrigger: commit
+      previews:
+        generation: automatic
